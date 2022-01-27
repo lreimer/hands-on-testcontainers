@@ -7,7 +7,16 @@ repositories {
 }
 
 dependencies {
+    implementation 'redis.clients:jedis:4.1.0'
+
     testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
     testImplementation "org.testcontainers:testcontainers:1.16.2"
     testImplementation "org.testcontainers:junit-jupiter:1.16.2"
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32'
+}
+
+test {
+    useJUnitPlatform()
 }
