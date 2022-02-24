@@ -4,6 +4,7 @@
 
 .gradle
 build/
+bin/
 
 gradle-app.setting
 !gradle-wrapper.jar

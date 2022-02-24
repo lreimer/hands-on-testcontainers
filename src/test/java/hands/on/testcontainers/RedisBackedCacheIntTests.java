@@ -20,7 +20,7 @@ public class RedisBackedCacheIntTests {
     @BeforeEach
     public void setUp() {
         String address = redis.getHost();
-        Integer port = redis.getFirstMappedPort();
+        Integer port = redis.getMappedPort(6379);
 
         // Now we have an address and port for Redis, no matter where it is running
         underTest = new RedisBackedCache(address, port);
